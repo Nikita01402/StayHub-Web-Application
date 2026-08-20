@@ -1,0 +1,50 @@
+
+<% layout("../views/layouts/boilerplate")%>
+
+<div class="row offset-3 mt-2">
+    <h2>Create a New listing</h2>
+
+    <div class="col-8">
+    <form action="/listings/new" method="POST" class="needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="title" class="form-label mb-0">Title</label>
+            <input type="text" name="listing[title]" placeholder="enter title" class="form-control" required> 
+            <div class="valid-feedback">Title Looks Good!</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="" class="form-label mb-0">Description</label>
+            <textarea name="listing[description]" id="" class="form-control" required></textarea>
+            <div class="invalid-feedback">Enter valid description</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label mb-0">Image</label>
+            <input type="text" name="listing[image]" placeholder="enter image URL/Link" class="form-control" >
+            <div class="invalid-feedback">Enter Valid image</div>
+        </div>
+
+        <div class="row">
+         <div class="mb-3 col-md-4">
+            <label for="price" class="form-label mb-0">Price</label>
+             <input type="text" name="listing[price]" placeholder="enter price" class="form-control" required>
+            <div class="invalid-feedback">Price should be valid</div>
+
+        </div>
+        <div class="mb-3 col-md-8">
+            <label for="country" class="form-label mb-0">Country</label>
+             <input type="text" name="listing[country]" placeholder="enter country" class="form-control" required>
+            <div class="invalid-feedback">Enter valid country name</div>
+        </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="location" class="form-label mb-0">Location</label>
+             <input type="text" name="listing[location]" placeholder="enter location" class="form-control" required>
+            <div class="invalid-feedback">Enter correct location</div>
+        </div>
+             <button class="btn edit-btn mt-2">Add</button>
+    </form>
+    </div>
+</div>  
