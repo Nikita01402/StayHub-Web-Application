@@ -2,8 +2,10 @@ if(process.env.NODE_ENV != "production"){
   require("dotenv").config()
 }
 
-console.log(process.env.SECRET);
-
+// console.log(process.env.SECRET);
+console.log("MAP_TOKEN exists:", !!process.env.MAP_TOKEN);
+console.log("ATLASDB_URL exists:", !!process.env.ATLASDB_URL);
+console.log("SECRET exists:", !!process.env.SECRET);
 
 const mongoose = require("mongoose");
 const express = require("express");
