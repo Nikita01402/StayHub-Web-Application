@@ -51,7 +51,7 @@
 
       <div class="navbar-nav ms-auto">
         <a class="nav-link explore" href="/listings/new">Become a host</a>
-        <% if(!curUser){ %>
+        <% if(typeof curUser === "undefined" || !curUser){ %>
         <a class="nav-link" href="/signup"><b>Sign up</b></a>
         <a class="nav-link " aria-current="page" href="/login"><b>Log in</b></a>
         <%}%>
