@@ -85,7 +85,7 @@ passport.deserializeUser(User.deserializeUser());
 
 // Home route
 app.get("/", (req, res) => {
-  res.render("/listings");
+  res.redirect("/listings");
 });
 
 //middleware for flash popup
