@@ -71,7 +71,7 @@ const sessionOption = {
 app.use(session(sessionOption));
 app.use(flash());
 
-store.on("error",()=>{
+store.on("error",(err)=>{
   console.log("Error in MONGO session store", err);
 })
 
@@ -84,9 +84,9 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // Home route
-// app.get("/", (req, res) => {
-//   res.send("I am home route");
-// });
+app.get("/", (req, res) => {
+  res.send("/listings");
+});
 
 //middleware for flash popup
 app.use((req,res,next)=>{
