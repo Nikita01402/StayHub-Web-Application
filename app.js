@@ -15,7 +15,7 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const ExpressError = require("./utils/ExpressError.js");
-const MongoStore = require('connect-mongo');
+const MongoStore = require('connect-mongo').default;
 
 
 const listingRouter = require("./routes/listing.js");
