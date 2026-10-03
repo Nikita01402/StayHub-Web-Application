@@ -37,10 +37,12 @@ const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
 const mapToken = process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/travel";
+// const MONGO_URL="mongodb://127.0.0.1:27017/travel";
+const DB_URL= process.env.ATLASDB_URL;
 
 async function main() {
-  await mongoose.connect(MONGO_URL);
+  // await mongoose.connect(MONGO_URL);
+  await mongoose.connect(DB_URL);
 }
 main().then(() => console.log("Connected successfully"))
   .catch((err) => console.log(err));

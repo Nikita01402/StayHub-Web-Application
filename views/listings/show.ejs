@@ -12,7 +12,7 @@
   <h5 class="card-title"></h5>
 
     <p class="card-text">
-          <p class="card-text">Owned by <%= listing.owner.username %></p>
+          <p class="card-text">Owned by <%= listing.owner ? listing.owner.username : "Unknown" %></p>
           <p class="card-text"> <%=listing.description%> </p>
           <p class="card-text"> &#8377; <%=listing.price.toLocaleString("en-In")%> </p>
           <p class="card-text"> <%=listing.country%> </p>
@@ -20,7 +20,7 @@
     </p>
     
   
-    <%if(curUser &&  listing.owner._id.equals(curUser._id)) { %>
+    <%if(curUser && listing.owner && listing.owner._id.equals(curUser._id)) { %>
       <div class="d-flex gap-2">
       <a href="/listings/<%=listing._id%>/update" class="btn edit-btn">Edit</a>
 
