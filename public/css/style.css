@@ -115,3 +115,8 @@ body{
   transform: scale(0.75);
   transform-origin: left center;
 }
+
+.f-info-socials a {
+    color: #222222;
+    text-decoration: none;
+}
