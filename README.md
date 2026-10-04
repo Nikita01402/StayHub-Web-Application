@@ -3,8 +3,8 @@ StayHub
 StayHub is a full-stack Airbnb-style listing platform where users can browse, create, edit, and review property listings. Built as a major project to practice server-side rendering, authentication, authorization, file uploads, and third-party API integration.
 
 Live Demo
+https://stayhub-m44d.onrender.com/
 
-[]
 
 Features
 User authentication — sign up, log in, log out, with secure password hashing via Passport.js
